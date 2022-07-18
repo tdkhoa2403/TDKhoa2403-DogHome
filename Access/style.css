@@ -31,7 +31,7 @@ header .header {
     margin: 20px 0 0 50px;
 }
 .header .header-nav {
-    margin: 30px 60px 0 0;
+    margin: 15px 60px 0 0;
 }
 .header .header-nav ul {
     list-style-type: none;
@@ -40,11 +40,27 @@ header .header {
     align-items: center;
 }
 .header .header-nav ul > li {
-    margin-left: 50px;
+    margin-left: 12px;
 }
-.header .header-nav a {
+.header .header-nav ul > li:first-child {
+    background-color: white;
+    border-radius: 5px;
+}
+.header .header-nav ul > li a {
     text-decoration: none;
     color: #fff;
+    padding: 15px;
+    display: block;
+}
+.header .header-nav li:first-child a {
+    color: #000;
+}
+.header .header-nav ul > li:hover {
+    background-color: white;
+    border-radius: 5px;
+}
+.header .header-nav ul > li:hover a {
+    color: #000;
 }
 
 #main-header {
@@ -56,7 +72,7 @@ header .header {
     margin-top: 18px;
 }
 #main-header h2 {
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     margin-bottom: 18px;
 }
 #main-header p {
@@ -175,15 +191,13 @@ header #label-list > span.btn {
 #services {
     background-color: #f8f9fa;
     padding: 100px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 
-
 #services .left {
-    width: 40%;
-    padding: 0 102px 0 50px;
-    text-align: left;
+    width: 90%;
+    padding: 0 50px;
 }
 #services .left h2 {
     font-size: 3rem;
@@ -195,38 +209,34 @@ header #label-list > span.btn {
     margin-bottom: 16px;
 }
 
-
 #services .right {
-    width: 60%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 49% 49%;
+    justify-content: space-around;
+    align-content: space-around;
 }
-#services .right > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#services .right > div  > div.item {
+#services .right > div.item {
     margin-right: 2%;
     margin-bottom: 3%;
     padding: 50px;
     text-align: center;
     background: #fff;
     border-radius: 4px;
-    box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
+    box-shadow: 7px 7px 10px 0 #e8ecf9;
 }
-.right > div > div.item i {
-    color: #f90;
+#services .right > div.item > div i {
+    color: #ff9900;
     font-size: 3rem;
 }
-.right > div > div.item h3 {
+#services .right > div.item > h3 {
     font-size: 2rem;
-    margin: 32px 0;
     font-weight: normal;
+    margin: 32px 0;
 }
-.right > div > div.item p {
-    margin-bottom: 10px;
+#services .right > div.item > p {
+    margin: 16px 0;
 }
-
 
 /* Testimonials */
 #testimonials {
@@ -390,7 +400,7 @@ header #label-list > span.btn {
     padding: 2rem;
     background-color: #f7f7f7;
     border-radius: 5px;
-    box-shadow: 7px 7px 10px 0 rgb(230, 221, 221);
+    box-shadow: 7px 7px 10px 0 #e8ecf9;
 }
 #contact .contact-main .contact-right form .form {
     margin-bottom: 15px;
